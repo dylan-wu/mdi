@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/bar.js",
   "scripts": {
-    "built": "netlify-lambda build src"
+    "build": "netlify-lambda build src"
   },
   "author": "",
   "license": "ISC",
