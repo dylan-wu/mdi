@@ -1,6 +1,5 @@
 
 function body(progress, scale, params){
-    console.log(params)
     let color = "#d9534f"
     if (progress / scale > 0.3){
         if (progress <= 0.7) {
@@ -44,7 +43,6 @@ function body(progress, scale, params){
 }
 
 exports.handler = function(event, context, callback) {
-    console.log(event)
     const progress = parseInt(event.path.substring(event.path.lastIndexOf('/')+1))
     callback(null, {
         statusCode: 200,
