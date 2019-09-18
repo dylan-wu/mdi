@@ -1,6 +1,5 @@
 
-function body(params){
-    console.log(params)    
+function body(params){ 
     if ('c' in params){
         console.log('k')
         if (!('color' in params)){
