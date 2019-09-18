@@ -4,7 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "built": "netlify-lambda build"
+    "built": "netlify-lambda build src"
   },
   "author": "",
   "license": "ISC",
