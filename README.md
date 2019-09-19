@@ -24,3 +24,7 @@ https://mdi1.netlify.com/.netlify/functions/box?c=blue&title=Done
 https://mdi1.netlify.com/.netlify/functions/bar/57?title=8/14
 ![](https://mdi1.netlify.com/.netlify/functions/bar/57?title=8/14)
 
+## Table
+
+https://mdi1.netlify.com/.netlify/functions/table
+![](https://mdi1.netlify.com/.netlify/functions/table)
