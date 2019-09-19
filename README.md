@@ -13,6 +13,9 @@ https://mdi1.netlify.com/.netlify/functions/box/50
 https://mdi1.netlify.com/.netlify/functions/box/92
 ![](https://mdi1.netlify.com/.netlify/functions/box/92)
 
+https://mdi1.netlify.com/.netlify/functions/box/88?title=14/16
+![](https://mdi1.netlify.com/.netlify/functions/box/88?title=14/16)
+
 ## Bar
 
 https://mdi1.netlify.com/.netlify/functions/bar/100?title=12/14
