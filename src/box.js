@@ -1,4 +1,3 @@
-
 function body(progress, scale, params){ 
     if ('c' in params){
         if (!('color' in params)){
@@ -18,11 +17,12 @@ function body(progress, scale, params){
             }
         }
     }
+    console.log(params)
     let text = ''
     if (progress){
         text =`<g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="14">
             <text x="50%" y="50%" text-anchor="middle">
-            ${params.title?(programs.title + ' '):'' + ratio * 100}%
+            ${params.title?(params.title + ' '):'' + ratio * 100}%
             </text>
         </g>`
     }
@@ -36,6 +36,7 @@ function body(progress, scale, params){
 
 exports.handler = function(event, context, callback) {
     const progress = parseInt(event.path.substring(event.path.lastIndexOf('/') + 1))
+    console.log(progress)
     callback(null, {
         statusCode: 200,
         headers: {"Content-Type":"image/svg+xml"},
