@@ -19,10 +19,10 @@ function body(progress, scale, params){
     }
     console.log(params)
     let text = ''
-    if (progress){
+    if (progress || params.title){
         text =`<g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="14">
             <text x="50%" y="52%" text-anchor="middle">
-            ${(params.title?(params.title + ' '):'') + ratio * 100}%
+            ${(params.title?(params.title + ' '):'') + (progress?(ratio * 100 + '%'):'')}
             </text>
         </g>`
     }
