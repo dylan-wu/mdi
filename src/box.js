@@ -1,7 +1,6 @@
 
 function body(progress, scale, params){ 
     if ('c' in params){
-        console.log('k')
         if (!('color' in params)){
             params.color = params.c
         }
@@ -36,7 +35,6 @@ function body(progress, scale, params){
 }
 
 exports.handler = function(event, context, callback) {
-    console.log(event)
     const progress = parseInt(event.path.substring(event.path.lastIndexOf('/') + 1))
     callback(null, {
         statusCode: 200,
