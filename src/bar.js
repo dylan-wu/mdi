@@ -33,10 +33,10 @@ function body(progress, scale, params){
             
             <g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
                 <text x="94.0" y="15" fill="#010101" fill-opacity=".3">
-                ${progress / scale * 100}%
+                ${Math.round(progress / scale * 100)}%
                 </text>
                 <text x="94.0" y="14">
-                ${progress / scale * 100}%
+                ${Math.round(progress / scale * 100)}%
                 </text>
             </g>
         </svg>`
