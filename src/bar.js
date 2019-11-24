@@ -3,9 +3,10 @@ function body(progress, scale, params){
     const ratio = progress/scale
 
     let color = "#d9534f"
+    const ratio = progress / scale
     if (ratio > 0.3){
-        if (ratio > 0.7) {
-            color =  "#5cb85c"
+        if (ratio <= 0.7) {
+            color =  "#f0ad4e"
         } else {
             color = "#f0ad4e"
         }
