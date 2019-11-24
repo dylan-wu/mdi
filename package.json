@@ -5,11 +5,16 @@
   "main": "src/bar.js",
   "scripts": {
     "build": "netlify-lambda build src",
-    "serve": "netlify-lambda serve src"
+    "serve": "netlify-lambda serve src",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "netlify-lambda": "^1.6.3"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "rewire": "^4.0.1"
   }
 }
