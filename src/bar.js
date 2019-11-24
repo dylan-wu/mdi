@@ -1,7 +1,5 @@
 
 function body(progress, scale, params){
-    const ratio = progress/scale
-
     let color = "#d9534f"
     const ratio = progress / scale
     if (ratio > 0.3){
