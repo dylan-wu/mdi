@@ -11,7 +11,7 @@ function body(progress, scale, params={}){
     }
 
     title = ''
-    progressX = 54
+    progressX = 58
     width = 60
 
     if ('title' in params){
