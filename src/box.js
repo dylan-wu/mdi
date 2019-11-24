@@ -17,7 +17,7 @@ function body(progress, scale, params){
             }
         }
     }
-    console.log(params)
+
     let text = ''
     if (progress || params.title){
         text =`<g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="14">

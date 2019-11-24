@@ -1,12 +1,30 @@
 
 function body(progress, scale, params){
+    const ratio = progress/scale
+
     let color = "#d9534f"
-    if (progress / scale > 0.3){
-        if (progress <= 0.7) {
-            color =  "#f0ad4e"
+    if (ratio > 0.3){
+        if (ratio > 0.7) {
+            color =  "#5cb85c"
         } else {
-            color = "#5cb85c"
+            color = "#f0ad4e"
         }
+    }
+
+    title = ''
+    progressX = 0
+
+    if (programs.title){
+        progressX = 94.0
+        title = `<rect rx="4" width="124" height="20" fill="url(#a)" />
+        <g fill="#fff" text-anchor="left" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
+        <text x="4" y="15" fill="#010101" fill-opacity=".3">
+            ${params.title}
+        </text>
+        <text x="4" y="14">
+            ${params.title}
+        </text>
+        </g>`
     }
 
     return `<?xml version="1.0" encoding="UTF-8"?>
@@ -18,24 +36,16 @@ function body(progress, scale, params){
 
             <rect rx="4" x="0" width="124" height="20" fill="#428bca"/>
             <rect rx="4" x="64" width="60" height="20" fill="#555" />
-            <rect rx="4" x="64" width="${progress / scale * 60}" height="20" fill="${color}" />
+            <rect rx="4" x="64" width="${ratio * 60}" height="20" fill="${color}" />
                 <path fill="${color}" d="M64 0h4v20h-4z" />
             
-            <rect rx="4" width="124" height="20" fill="url(#a)" />
-                <g fill="#fff" text-anchor="left" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
-                <text x="4" y="15" fill="#010101" fill-opacity=".3">
-                    ${params.title}
-                </text>
-                <text x="4" y="14">
-                    ${params.title}
-                </text>
-                </g>
+            ${title}
             
             <g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
-                <text x="94.0" y="15" fill="#010101" fill-opacity=".3">
+                <text x="${progressX}" y="15" fill="#010101" fill-opacity=".3">
                 ${Math.round(progress / scale * 100)}%
                 </text>
-                <text x="94.0" y="14">
+                <text x="${progressX}" y="14">
                 ${Math.round(progress / scale * 100)}%
                 </text>
             </g>
