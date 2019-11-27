@@ -6,17 +6,17 @@ function body(progress, scale, params={}){
         if (ratio <= 0.7) {
             color =  "#f0ad4e"
         } else {
-            color = "#f0ad4e"
+            color = "#5cb85c"
         }
     }
 
     title = ''
     progressX = 58
-    width = 60
+    barX = 0
 
     if ('title' in params){
         progressX = 94.0
-        width = ratio * 60
+        barX = 124 - ratio * 60
         title = `<rect rx="4" width="124" height="20" fill="url(#a)" />
         <g fill="#fff" text-anchor="left" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
         <text x="4" y="15" fill="#010101" fill-opacity=".3">
@@ -37,7 +37,7 @@ function body(progress, scale, params={}){
 
             <rect rx="4" x="0" width="124" height="20" fill="#428bca"/>
             <rect rx="4" x="64" width="60" height="20" fill="#555" />
-            <rect rx="4" x="64" width="${width}" height="20" fill="${color}" />
+            <rect rx="4" x="${barX}" width="${124 - barX}" height="20" fill="${color}" />
                 <path fill="${color}" d="M64 0h4v20h-4z" />${title}
             <g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
                 <text x="${progressX}" y="15" fill="#010101" fill-opacity=".3">
