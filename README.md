@@ -27,6 +27,12 @@ https://mdi1.netlify.com/.netlify/functions/bar/57?title=8/14
 https://mdi1.netlify.com/.netlify/functions/bar/57
 ![](https://mdi1.netlify.com/.netlify/functions/bar/57)
 
+![](https://mdi1.netlify.com/.netlify/functions/bar/100)
+
+![](https://mdi1.netlify.com/.netlify/functions/bar/50)
+
+![](https://mdi1.netlify.com/.netlify/functions/bar/25)
+
 ## Table
 
 https://mdi1.netlify.com/.netlify/functions/table
