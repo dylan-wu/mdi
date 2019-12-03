@@ -51,3 +51,11 @@ https://mdi1.netlify.com/.netlify/functions/bar/25
 
 https://mdi1.netlify.com/.netlify/functions/table
 ![](https://mdi1.netlify.com/.netlify/functions/table)
+
+| progress | 1 | 2 | 3 | 4 | 5 |
+|----------|---|---|---|---|---|
+| 1 | | | | | |
+| 2 | | | | | |
+| 3 | | | | | |
+| 4 | | | | | |
+| 5 | | | | | |
