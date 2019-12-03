@@ -21,7 +21,7 @@ function body(progress, scale, params={}){
     titleBg = ''
     progressX = 58
 
-    if ('title' in params){
+    if ('title' in params && params.title){
         progressX = 94.0
         title = `<g fill="#fff" text-anchor="left" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
         <text x="4" y="15" fill="#010101" fill-opacity=".3">
