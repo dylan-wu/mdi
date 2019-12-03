@@ -1,5 +1,12 @@
 
 function body(progress, scale, params={}){
+    progress = parseInt(progress)
+    if (!progress || isNaN(progress)){
+        progress = 0
+    }
+    if (!scale || isNaN(scale)){
+        scale = 100
+    }    
     let color = "#d9534f"
     const ratio = progress / scale
     if (ratio > 0.3){
@@ -11,14 +18,12 @@ function body(progress, scale, params={}){
     }
 
     title = ''
+    titleBg = ''
     progressX = 58
-    barX = 0
 
     if ('title' in params){
         progressX = 94.0
-        barX = 124 - ratio * 124
-        title = `<rect rx="4" width="124" height="20" fill="url(#a)" />
-        <g fill="#fff" text-anchor="left" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
+        title = `<g fill="#fff" text-anchor="left" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
         <text x="4" y="15" fill="#010101" fill-opacity=".3">
             ${params.title}
         </text>
@@ -30,15 +35,10 @@ function body(progress, scale, params={}){
 
     return `<?xml version="1.0" encoding="UTF-8"?>
         <svg width="124" height="20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
-            <linearGradient id="a" x2="0" y2="100%">
-                <stop offset="0" stop-color="#bbb" stop-opacity=".1"/>
-                <stop offset="1" stop-opacity=".1"/>
-            </linearGradient>
-
-            <rect rx="4" x="0" width="124" height="20" fill="#428bca"/>
-            <rect rx="4" x="64" width="60" height="20" fill="#555" />
-            <rect rx="4" x="${barX}" width="${124 - barX}" height="20" fill="${color}" />
-                <path fill="${color}" d="M64 0h4v20h-4z" />${title}
+            <rect rx="4" x="0" width="124" height="20" fill="#000" />
+            <rect rx="4" x="0" width="${ratio * 124}" height="20" fill="${color}" />
+                <path fill="${color}"  />
+            ${title}                
             <g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
                 <text x="${progressX}" y="15" fill="#010101" fill-opacity=".3">
                 ${Math.round(progress / scale * 100)}%
@@ -51,7 +51,7 @@ function body(progress, scale, params={}){
 }
 
 exports.handler = function(event, context, callback) {
-    const progress = parseInt(event.path.substring(event.path.lastIndexOf('/')+1))
+    const progress = event.path.substring(event.path.lastIndexOf('/')+1)
     callback(null, {
         statusCode: 200,
         headers: {"Content-Type":"image/svg+xml"},
