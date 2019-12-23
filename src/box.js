@@ -29,7 +29,7 @@ function body(progress, scale, params){
 
     return `<?xml version="1.0" encoding="UTF-8"?>
         <svg width="120" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
-            <rect width="120" height="60" fill="${params.color}" />
+            <rect width="80" height="40" fill="${params.color}" />
             ${text}
         </svg>`
 }
