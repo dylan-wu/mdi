@@ -11,7 +11,7 @@ function body(progress, scale, params){
     
     if ('s' in params){
         width = 60
-        height = 28
+        height = 30
         fontSize = 9
     }
     
