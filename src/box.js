@@ -30,7 +30,7 @@ function body(progress, scale, params){
 
     let text = ''
     if (progress || params.title){
-        text =`<g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="{$fontSize}">
+        text =`<g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="${fontSize}">
             <text x="50%" y="52%" text-anchor="middle">
             ${(params.title?(params.title + ' '):'') + (progress?(Math.round(ratio * 100) + '%'):'')}
             </text>
@@ -38,8 +38,8 @@ function body(progress, scale, params){
     }
 
     return `<?xml version="1.0" encoding="UTF-8"?>
-        <svg width="width" height="height" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
-            <rect width="{$width}" height="{$height}" fill="${params.color}" />
+        <svg width="${width}" height="${height}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+            <rect width="${width}" height="${height}" fill="${params.color}" />
             ${text}
         </svg>`
 }
