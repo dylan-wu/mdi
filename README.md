@@ -1,6 +1,8 @@
 # Markdown Images
 
 ## Box
+https://mdi1.netlify.com/.netlify/functions/box?c=green&s
+
 https://mdi1.netlify.com/.netlify/functions/box?c=red
 
 ![](https://mdi1.netlify.com/.netlify/functions/box?c=red)
