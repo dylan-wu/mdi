@@ -1,7 +1,7 @@
 function body(progress, scale, params){ 
-    let width = 80
-    let height = 40
-    let fontSize = 12
+    let width = 60
+    let height = 30
+    let fontSize = 9    
     
     if ('c' in params){
         if (!('color' in params)){
@@ -9,10 +9,10 @@ function body(progress, scale, params){
         }
     }
     
-    if ('s' in params){
-        width = 60
-        height = 30
-        fontSize = 9
+    if ('l' in params){
+        width = 80
+        height = 40
+        fontSize = 12
     }
     
     const ratio = progress/scale
